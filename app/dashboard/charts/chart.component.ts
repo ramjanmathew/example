@@ -1,15 +1,20 @@
 import { Component, OnInit} from '@angular/core';
 
+
 declare var $: any;
 
 @Component({
   selector: 'app-chart-cmp',
-  templateUrl: 'chart.component.html'
+  templateUrl: 'chart.component.html',
+  styleUrls: ['chart.component.css']
 })
 
 export class ChartComponent implements OnInit {
-  ngOnInit() {
-        let container: any = $('#container');
+	
+	
+	  ngOnInit() {
+	
+	          let container: any = $('#container');
         container.highcharts({
         chart: {
             type: 'area'

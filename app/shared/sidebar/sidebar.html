@@ -1,14 +1,28 @@
 <button class="btn btn-default" id="toggle-sidebar" type="button"
 	(click)="eventCalled()">&#9776;</button>
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+	
 	<ul class="list-group">
+		<div _ngcontent-c6 class="profile text-center">
+			<a _ngcontent-c6 ui-sref="profile">
+			<img _ngcontent-c6 class="user-avatar" src="http://ani-angular.strapui.com/assets/images/flat-avatar.png" style="display: block;
+   margin-left: auto;
+   margin-right: auto; margin-bottom: 20px; margin-top: 20px;"
+   >
+			</a>
+			<div _ngcontent-c6 class="text-muted" style="text-align: center;margin-bottom: 10px;">John Smith</div>
+			</div>
 		<a routerLink="/dashboard/home"
 			[routerLinkActive]="['router-link-active']" class="list-group-item">
 			<i class="f"></i> Home
 		</a>
 		<a [routerLink]="['chart']"
 			[routerLinkActive]="['router-link-active']" class="list-group-item">
-			<i class="ff"></i> Helmets
+			<i class="f"></i> Helmets
 		</a>
+		<a [routerLink]="['forms']"
+			[routerLinkActive]="['router-link-active']" class="list-group-item">
+				<i class="f"></i>forms
+				</a>
 			</ul>
 </nav>
