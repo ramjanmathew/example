@@ -8,6 +8,7 @@ import { FormRoutes } from './forms/forms.routes';
 import { GridRoutes } from './grid/grid.routes';
 import { BSComponentRoutes } from './bs-component/bsComponent.routes';
 import { BSElementRoutes } from './bs-element/bsElement.routes';
+import { GalleryComponent } from '../images/gallery/gallery.component';
 
 import { DashboardComponent } from './index';
 
@@ -25,5 +26,6 @@ export const DashboardRoutes: Route[] = [
         ...GridRoutes,
         ...BSElementRoutes
       ]
-    }
+    },
+    {path: 'images' , component: GalleryComponent}
 ];

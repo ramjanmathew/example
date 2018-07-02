@@ -4,21 +4,59 @@
 		<div class="col-xl-12">
 			<h1 class="page-header">Helmet Detection</h1>
 			
-		<div class="form-group row">
-  <div class="input-group">
-    <input type="text" id="datetimepicker" class="form-control" name="date">
-    <label class="input-group-addon btn" for="date">
-       <span class="fa fa-calendar open-datetimepicker"></span>
-    </label>
-</div>
-  
+		
+			<div id="addQuestion">
+			<div class="col-xs-3">
+<label for="example-datetime-local-input" class="col-2 col-form-label">From:</label>
+  <div class="col-10">
+    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="date1" >
+  </div>
+			</div>
+			<div class="col-xs-3">
   <label for="example-datetime-local-input" class="col-2 col-form-label">To:</label>
   <div class="col-10">
-    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" max="">
+    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="date2" >
   </div>
-
-</div>
-		<button type="submit" class="btn btn-primary">Fetch</button>
+  
+			</div>
+			<a routerLink="/images"
+			[routerLinkActive]="['router-link-active']" href="../../images/gallery" >
+		<button type="submit" class="btn btn-primary" id="button" (click)="dates($event)">Fetch</button></a>
+		<p><span id="display"></span></p>
+		<p><span id="display1"></span></p>
 			</div>
 	</div>
-</div>
+
+	<style>
+		#addQuestion{
+			margin-top: 180px;
+			margin-left: 135px;
+		}
+		.page-header{
+			text-align: center;
+			margin-top: 60px;
+			color: white;
+			
+		}
+		.col-form-label{
+			color: white;			
+		}
+		.col-xs-3{
+			margin:0px 0px 10px 500px;
+		}
+		.btn-primary{
+			margin:17% -10% 0% -15%;
+		}
+		.container-fluid{
+			width: 100%;
+    height: 100%;
+    background: url('../../assets/img/bg2.jpg') center;
+    background-size: 100% 100%;
+    background-position: top center;
+		}
+		#display,#display1{
+			margin-left: 45%;
+			color: white;
+		}
+			</style>
+

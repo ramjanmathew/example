@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 declare var $: any;
 
@@ -11,8 +10,21 @@ declare var $: any;
 
 export class ChartComponent implements OnInit {
 	
-	
+	dates(event){
+    let date1=(<HTMLInputElement>document.getElementById("date1")).value;
+       let date2=(<HTMLInputElement>document.getElementById("date2")).value;
+       let newDate;
+       let newDate1;
+        newDate = new Date(date1);
+        newDate1 = new Date(date2);       
+   document.getElementById("display").innerHTML=newDate;
+   document.getElementById("display1").innerHTML=newDate1;
+   
+   }
+
+   	
 	  ngOnInit() {
+		  
 	
 	          let container: any = $('#container');
         container.highcharts({

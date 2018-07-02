@@ -26,7 +26,7 @@ export class NotificationComponent { }
 @Component({
   selector: 'app-home-cmp',
   templateUrl: 'home.component.html',
-  styleUrls: ['home.css'],
+  styleUrls: ['home.component.css'],
 })
 
 export class HomeComponent {
