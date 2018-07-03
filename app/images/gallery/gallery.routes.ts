@@ -1,9 +1,14 @@
 import { Route } from '@angular/router';
-import { GalleryComponent } from './images/gallery/gallery.component';
+import { GalleryComponent } from './index';
+import {ImageComponent} from '../image/image.component';
 
-export const ImageRoutes: Route[] = [
+export const GalleryRoutes: Route[] = [
     {
       path: 'images',
       component: GalleryComponent
+    },
+    {
+    path : 'grp',
+    component: ImageComponent
     }
 ];

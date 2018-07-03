@@ -1,19 +1,23 @@
 <router-outlet></router-outlet>
 <app-top-nav></app-top-nav>
 <div class="bg">
-<h2>Recent Photos</h2>
+		
 <div class="row">
-   
+
+  <div class="col-sm-4">
+  <div class="col-10">
+    <input  type="datetime-local" value="2011-08-19T13:45:00" id="date2" >
+    <div class="s">
+    <input  type="datetime-local" value="2011-08-19T13:45:00" id="date2" >
+</div>
+  </div>
+  
          <ul id="thumbnailsList">
 	                  <li *ngFor="let image of visibleImages" >
-            <a [routerLink] ="['/image', image.id]" class="tn">
-                <img src="{{image['url']}}" class="tn1" width="300" height="260">
-                
-                
-            </a>
-            <p class="details">
-                    {{title}}</p>
-                          
+            <a routerLink="/grp" class="tn" [routerLinkActive]="['router-link-active']">
+               <!-- <img src="{{image['url']}}" class="tn1" width="250" height="210">-->
+                link
+              </a>  
         </li>
     </ul>
     

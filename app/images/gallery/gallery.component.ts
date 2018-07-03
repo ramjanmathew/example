@@ -14,9 +14,8 @@ export class GalleryComponent implements OnInit {
 title: 'Recent Photos';
 visibleImages: any;
   constructor(private http: HttpClient) {
-	//  this._imageService.getImage()
-    //.subscribe({images} => this.visibleImages = {imageUrl : images['_url'] });
-	  this.http.get("https://jsonplaceholder.typicode.com/photos").subscribe(data => {
+	
+	  this.http.get("assets/detail.json").subscribe(data => {
                    this.visibleImages = data;
                   });
   }
